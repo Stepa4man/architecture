@@ -126,9 +126,8 @@ Start File Import
 
 ```
 {
-  "importEntry": {
-      "profile": {
-        "uuid": "profile uuid, if there is one",
+    "importConfig": {
+        "profile_uuid": "profile uuid, if there is one",
         "behaviour": "add_update, delete, update, add, replace",
         "import_image_archive": "string",
         "import_images_file_dir": "string",
@@ -139,16 +138,13 @@ Start File Import
         "csv_enclosure": "string",
         "csv_delimiter": "string",
         "multiple_value_separator": "string"
-      }
-  }
+    }
 }
 ```
 
 | Key | Value |
 | --- | --- |
-| uuid | UUID that was returned by source upload call |
-| profile | Wrapper for profile object |
-| profile_code | Its a Profile code, which will be used for process import. In First version this parameter will not be intensively used, cause profiling is only in scope of Phase 3. |
+| profile_uuid | UUID of profile that will be applyed |																												
 | behaviour | Import behaviour (add_update, delete, update, add, replace) |
 | import_image_archive | Relative path to product images archive file |
 | import_images_file_dir | Relative path to product images files |
